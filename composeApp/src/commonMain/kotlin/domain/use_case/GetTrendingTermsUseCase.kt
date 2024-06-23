@@ -4,7 +4,9 @@ import data.repository.TenorRepository
 import domain.entities.TrendingTerms
 
 class GetTrendingTermsUseCase(private val tenorRepository: TenorRepository) {
-    suspend fun getTrendingTerms(): TrendingTerms {
+
+    suspend operator fun invoke(): TrendingTerms {
         return tenorRepository.getTrendingTerms()
+
     }
 }

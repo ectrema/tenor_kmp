@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class TrendingTermsModels(
     @SerialName("locale")
-    val locale: String?,
+    val locale: String? = null,
     @SerialName("results")
-    val results: List<String>?,
+    val results: List<String>? = null,
 )

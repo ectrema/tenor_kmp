@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 kotlin {
@@ -46,6 +47,8 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.bundles.ktor.common)
             implementation(libs.koin.core)
+            implementation(libs.lifecycle.viewmodel)
+            implementation(libs.koin.compose)
         }
     }
 }
@@ -85,5 +88,8 @@ android {
     dependencies {
         debugImplementation(compose.uiTooling)
     }
+}
+dependencies {
+    implementation(libs.androidx.material3.android)
 }
 

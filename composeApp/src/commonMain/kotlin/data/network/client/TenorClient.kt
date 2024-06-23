@@ -20,6 +20,7 @@ class TenorClient {
     }
 
     suspend fun getTrendingTerms(): TrendingTermsModels {
-        return httpClient.get("https://tenor.googleapis.com/v2/trending_terms").body()
+        return httpClient.get("https://tenor.googleapis.com/v2/trending_terms?key=AIzaSyD3U57ytKdya6GPPGspReBnXNdjobSQLJc")
+            .body()
     }
 }
